@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .5s ease;
+}
+
+html,
+body {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.go {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background: rgb(255,111,59);
+    background: radial-gradient(circle, rgba(255,111,59,1) 0%, rgba(255,127,80,1) 35%);
+    border-radius: 50%;
+    filter: brightness(.8);
+    border: solid 3px #ff44006b;
+
+    &:hover {
+        background: rgb(255,111,59);
+        background: radial-gradient(circle, rgba(255,111,59,1) 0%, rgba(255,127,80,1) 35%);
+        filter: brightness(1.1);
+        transform: scale(1.02);
+    }
+
+    & h2 {
+        color: #f1f1f1;
+        text-transform: uppercase;
+    }
+}
