@@ -4,65 +4,36 @@ let Car = class {
         this.mark = mark
         this.model = model
         this.year = year
+        this.speed = 0
+        this.engine = false
     }
 
-    go() {
-        console.log(`${this.model} Врум-врум!`)
+    start(){
+        if(this.engine == true) return true
+        else {
+            this.engine = false
+            return this.engine
+        }
+    }
+    
+    stop(){
+        if(this.engine == false) return false
+        else {
+            this.engine = true
+            return this.engine
+        }
     }
 
-    printInfo() {
-        console.log(`Марка: ${this.mark}, модель: ${this.model}, ${this.year} года`)
-    }
+    speedUp()
+    speedDown()
+    printInfo()
 
 }
 
 
-const Car1 = new Car('Жигули', 'ВАЗ-2105', 1980)
+const Car1 = new Car('Жигули', 'ВАЗ-2105', 1980, 240, true)
 
-Car1.go()
-Car1.printInfo()
-
-class People {
-
-    constructor(name, age) {
-        this.name = name
-        this.suname = ''
-        this.age
-    }
-
-    get suname(){
-        return this._suname
-    }
-
-    set suname(suname){
-        if(suname.lenght < 5) console.log('Короткое имя')
-        else this._suname = suname
-    }
-
-    speak(){
-        console.log(`Меня зовут ${this.name}`)
-    }
-
+function changeColor() { 
+    var go = document.getElementsByClassName(".go"); 
+    go.style.background = "#000";
 }
-
-class Driver extends People {
-    constructor(name, suname, age, car){
-        super(name, suname, age)
-        this.car = car
-    }
-
-    speak(){
-        super.speak()
-        console.log()
-    }
-
-    drive(){
-        console.log('Врум-врум!')
-    }
-}
-
-
-let drive1 = new Driver('Oleg', 28, 'Porshe 911')
-
-drive1.speak()
-drive1.drive()
