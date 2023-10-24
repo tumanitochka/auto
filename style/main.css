@@ -48,12 +48,26 @@ h1 {
     margin-left: 10rem;
 }
 
+@media (max-width: 575.98px) {
+    h1 {
+        margin-left: 0;
+    }
+}
+
 .column {
     display: flex;
     align-items: center;
     margin: 0 auto;
     gap: 3%;
     width: 540px;
+}
+
+
+@media (max-width: 575.98px) {
+    .column {
+        flex-direction: column;
+        width: 120vw;
+    }
 }
 
 .form {
@@ -95,4 +109,9 @@ h1 {
     &:active {
         transform: scale(.9);
     }
+}
+
+
+@media (max-width: 575.98px) {
+    
 }
